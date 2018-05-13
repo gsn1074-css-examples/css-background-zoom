@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper{
+    width: 800px;
+    height: 533px;
+    overflow: hidden;
+    position: relative;
+}
+
+#bg {
+    position: absolute;
+    animation-name: back;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes back {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+#fg {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    animation-name: fore;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fore {
+    from {
+        transform: scale(1);
+        left: 100px;
+    }
+    to {
+        transform: scale(1.4);
+        left: 40px;
+    }
+}
